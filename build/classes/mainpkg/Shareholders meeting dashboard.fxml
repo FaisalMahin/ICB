@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="646.0" prefWidth="933.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="mainpkg.ShareholdersMeetingDashboardController">
+   <children>
+      <Text layoutX="110.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text layoutX="110.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upcoming Meetings :" />
+      <Hyperlink layoutX="270.0" layoutY="125.0" prefHeight="35.0" prefWidth="197.0" text="Hyperlink" />
+      <Button layoutX="110.0" layoutY="201.0" mnemonicParsing="false" text="Rechedule Meeting" />
+      <MenuButton layoutX="270.0" layoutY="201.0" mnemonicParsing="false" text=" select time">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </MenuButton>
+      <Button layoutX="794.0" layoutY="553.0" mnemonicParsing="false" text="Ok" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="614.0" prefWidth="922.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.RCDashboardController">
+   <children>
+      <Button layoutX="367.0" layoutY="122.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="202.0" text="Regulation Management" />
+      <Button layoutX="356.0" layoutY="197.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="224.0" text="Existing Rules and Regulations" />
+      <ComboBox layoutX="590.0" layoutY="205.0" prefHeight="31.0" prefWidth="129.0" promptText="Select  one" />
+      <Button layoutX="45.0" layoutY="546.0" mnemonicParsing="false" text="Back" />
+      <TextField layoutX="282.0" layoutY="24.0" prefHeight="72.0" prefWidth="358.0" text="Regulatory Compliance">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>
