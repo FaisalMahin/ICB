@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package mainpkg;
 
 import java.io.Serializable;
@@ -77,8 +73,8 @@ public class Registernewmember implements Serializable {
     public void setNid(String nid) {
         this.nid = nid;
     }
-
-    @Override
+    
+    @Deprecated
     public String toString() {
         return "Registernewmember{" + "fname=" + fname + ", lname=" + lname + ", acctype=" + acctype + ", contact=" + contact + ", email=" + email + ", nid=" + nid + '}';
     }
