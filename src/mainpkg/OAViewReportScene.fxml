@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="487.0" prefWidth="677.0" style="-fx-background-color: lime;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.OAViewReportSceneController">
+   <children>
+      <Label alignment="CENTER" layoutX="182.0" layoutY="40.0" prefHeight="42.0" prefWidth="314.0" style="-fx-background-color: yellow;" text="VIEW REPORT PAGE" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Broadway" size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="enterDateofViewReport" layoutX="232.0" layoutY="102.0" prefHeight="42.0" prefWidth="214.0" promptText="Enter Date" />
+      <Button layoutX="239.0" layoutY="162.0" mnemonicParsing="false" onAction="#viewReportButtonOnClick" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: green;" text="VIEW REPORT" textFill="#f2d2d2">
+         <font>
+            <Font name="Broadway" size="15.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="viewReportTA" layoutX="20.0" layoutY="217.0" prefHeight="185.0" prefWidth="630.0" />
+      <Button layoutX="569.0" layoutY="441.0" mnemonicParsing="false" onAction="#goToBack" prefHeight="32.0" prefWidth="87.0" style="-fx-background-color: red;" text="BACK" textFill="#f2d2d2">
+         <font>
+            <Font name="Broadway" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

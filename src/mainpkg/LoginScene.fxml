@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="413.0" prefWidth="941.0" style="-fx-background-color: lime;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.LoginSceneController">
+   <children>
+      <Label layoutX="225.0" layoutY="36.0" text="Investment Corporation of Bangladesh(ISB)">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="375.0" layoutY="126.0" prefHeight="35.0" prefWidth="223.0" style="-fx-background-color: magenda;" text="LOGIN TO YOUR ACCOUNT">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="240.0" layoutY="205.0" text="USER ID:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="240.0" layoutY="252.0" text="Password:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="240.0" layoutY="309.0" text="USER:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userIdTextField" layoutX="314.0" layoutY="201.0" prefHeight="25.0" prefWidth="195.0" />
+      <TextField fx:id="userPasswordTextField" layoutX="314.0" layoutY="248.0" prefHeight="25.0" prefWidth="195.0" />
+      <ComboBox fx:id="selectUserComboBox" layoutX="314.0" layoutY="305.0" prefHeight="25.0" prefWidth="195.0" />
+      <Button layoutX="563.0" layoutY="196.0" mnemonicParsing="false" onAction="#loginButtonOnClick" prefHeight="136.0" prefWidth="125.0" style="-fx-background-color: green;" text="LOGIN" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Broadway" size="22.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
