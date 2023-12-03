@@ -75,7 +75,7 @@ public class LoginSceneController implements Initializable {
         a.showAndWait();
     }
         else if(userIdTextField.getText().equals("sayma") && userPasswordTextField.getText().equals("1236") && selectUserComboBox.getValue().equals("Regulators and Supervisory Body")) {
-        Parent mainSceneParent = FXMLLoader.load(getClass().getResource("RASB dashboard.fxml"));
+        Parent mainSceneParent = FXMLLoader.load(getClass().getResource("RASBDashboard.fxml"));
         Scene scene1 = new Scene(mainSceneParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         
