@@ -15,13 +15,13 @@ import static java.lang.System.out;
  */
 public class AppendableObjectOutputStream extends ObjectOutputStream {
 
-    public AppendableObjectOutputStream(FileOutputStream fos) throws IOException 
-            {
-                super(out);
-            }
-            @Override
-            protected void writeStreamHeader() throws IOException{
-              //todo
-            }
-    
+    public AppendableObjectOutputStream(FileOutputStream fos) throws IOException {
+        super(out);
+    }
+
+    @Override
+    protected void writeStreamHeader() throws IOException {
+        //todo
+    }
+
 }
