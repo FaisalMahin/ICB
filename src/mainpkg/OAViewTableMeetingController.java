@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,11 +23,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author Administrator
- */
+
 public class OAViewTableMeetingController implements Initializable {
 
     @FXML
@@ -40,49 +38,52 @@ public class OAViewTableMeetingController implements Initializable {
     private TableColumn<Meeting, String> tableDatecolumn;
     @FXML
     private TableColumn<Meeting, String> tableapprovalColumn;
-
-
+    ObservableList<Meeting> data1;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
         tableMeetingIDColumn.setCellValueFactory(new PropertyValueFactory<Meeting, String>("tableMeetingIDColumn"));
         tablePurposeColumn.setCellValueFactory(new PropertyValueFactory<Meeting, String>("tablePurposeColumn"));
         tableTimecolumn.setCellValueFactory(new PropertyValueFactory<Meeting, String>("tableTimecolumn"));
         tableDatecolumn.setCellValueFactory(new PropertyValueFactory<Meeting, String>("tableDatecolumn"));
-        tableapprovalColumn.setCellValueFactory(new PropertyValueFactory<Meeting,String>("tableapprovalColumn"));
+        tableapprovalColumn.setCellValueFactory(new PropertyValueFactory<Meeting, String>("tableapprovalColumn"));
         loadMeetingFile();
-    }    
+    }
+
     private void loadMeetingFile() {
-        ObjectInputStream ois=null;
-         try {
+        ObjectInputStream ois = null;
+        try {
             Meeting s;
             ois = new ObjectInputStream(new FileInputStream("Createmeeting.bin"));
-            while(true){
-            s = (Meeting) ois.readObject();
+            while (true) {
+                s = (Meeting) ois.readObject();
 
-            s.display();
-            meetingTableView.getItems().add(s);
+                s.display();
+                meetingTableView.getItems().add(s);
             }
-            
+
         } catch (Exception ex) {
             try {
-                if(ois!=null)
+                if (ois != null) {
                     ois.close();
-            } 
-            catch (IOException e) {
+                }
+            } catch (IOException e) {
                 e.printStackTrace();
             }
             ex.printStackTrace();
-        }        
+        }
     }
+
     @FXML
     private void goToBack(ActionEvent event) throws IOException {
         Parent mainSceneParent = FXMLLoader.load(getClass().getResource("OfficerAssistantDashboard.fxml"));
         Scene scene1 = new Scene(mainSceneParent);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
         window.setScene(scene1);
-        window.show(); 
-        
+        window.show();
+
     }
-    
+
 }

@@ -84,9 +84,22 @@ public class LoginSceneController implements Initializable {
         Alert a = new Alert(Alert.AlertType.INFORMATION);
         a.setTitle("Success!!!");
         a.setHeaderText("LogIn Successful");
-        a.setContentText("Regulators and Supervisor");
+        a.setContentText("Sign in as a Regulators and Supervisor");
         a.showAndWait();
-    }    
+    } 
+        else if(userIdTextField.getText().equals("sayma") && userPasswordTextField.getText().equals("1237") && selectUserComboBox.getValue().equals("Shareholders")) {
+        Parent mainSceneParent = FXMLLoader.load(getClass().getResource("shareholder dashboard.fxml"));
+        Scene scene1 = new Scene(mainSceneParent);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        
+        window.setScene(scene1);
+        window.show();
+        Alert a = new Alert(Alert.AlertType.INFORMATION);
+        a.setTitle("Success!!!");
+        a.setHeaderText("LogIn Successful");
+        a.setContentText("Sign in as a Shareholder");
+        a.showAndWait();
+    }
         else{
         Alert a = new Alert(Alert.AlertType.ERROR);
         a.setTitle("Oops! Something went wrong!");

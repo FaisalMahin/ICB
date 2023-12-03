@@ -39,50 +39,54 @@ public class OADailyReportSceneController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void createReportButtonOnClick(ActionEvent event) {
         File f = null;
         FileWriter fw = null;
         try {
-          
-            f = new File(reportDate.getValue()+".txt"); 
-            if(f.exists()) fw = new FileWriter(f,true);
-            else fw = new FileWriter(f);
-           
+
+            f = new File(reportDate.getValue() + ".txt");
+            if (f.exists()) {
+                fw = new FileWriter(f, true);
+            } else {
+                fw = new FileWriter(f);
+            }
+
             fw.write(
-                reportDescription.getText()+"\n" // \n -> next line ,start a new line
-            );           
-           
+                    reportDescription.getText() + "\n" // \n -> next line ,start a new line
+            );
+
         } catch (IOException ex) {
             //TODO
         } finally {
-          try {
-              if(fw != null) fw.close();
-          } catch (IOException ex) {
-              //TODO
-          }
-      }
-        
-        
+            try {
+                if (fw != null) {
+                    fw.close();
+                }
+            } catch (IOException ex) {
+                //TODO
+            }
+        }
+
         reportDescription.clear();
-        
+
         Alert a = new Alert(Alert.AlertType.INFORMATION);
         a.setTitle("Congratulation");
         a.setHeaderText("Report Created Successfully");
-        a.showAndWait();   
+        a.showAndWait();
     }
 
     @FXML
     private void goToBack(ActionEvent event) throws IOException {
         Parent mainSceneParent = FXMLLoader.load(getClass().getResource("OfficerAssistantDashboard.fxml"));
         Scene scene1 = new Scene(mainSceneParent);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
         window.setScene(scene1);
-        window.show(); 
-         
+        window.show();
+
     }
-    
+
 }

@@ -44,37 +44,37 @@ public class OARegisterAnAccountSceneController implements Initializable {
     private TextField emailTF;
     @FXML
     private ComboBox<String> accountTypeComboBox;
-    ObservableList<String> list1 = FXCollections.observableArrayList("Investor","HR Manager","Office Assistant","Stackholder","Employeee");
+    ObservableList<String> list1 = FXCollections.observableArrayList("Investor", "HR Manager", "Office Assistant", "Stackholder", "Employeee");
     @FXML
     private TextField nidTF;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         accountTypeComboBox.setItems(list1);
-        
-    }    
+
+    }
 
     @FXML
     private void registerButtonOnClick(ActionEvent event) {
         ArrayList u = new ArrayList<Registernewmember>();
-        u.add(new Registernewmember(fisrtNameTF.getText(), lastNameTF.getText(), accountTypeComboBox.getValue(), phoneNumTF.getText(), emailTF.getText(),nidTF.getText()));
-        
+        u.add(new Registernewmember(fisrtNameTF.getText(), lastNameTF.getText(), accountTypeComboBox.getValue(), phoneNumTF.getText(), emailTF.getText(), nidTF.getText()));
+
         File f = null;
-        FileOutputStream fos=null;
-        ObjectOutputStream out=null;
-        
+        FileOutputStream fos = null;
+        ObjectOutputStream out = null;
+
         try {
             f = new File("Registernewmember.bin");
-            if(f.exists()) {
-                fos = new FileOutputStream(f,true);
-                out=new AppendableObjectOutputStream(fos);
+            if (f.exists()) {
+                fos = new FileOutputStream(f, true);
+                out = new AppendableObjectOutputStream(fos);
+            } else {
+                fos = new FileOutputStream(f);
+                out = new ObjectOutputStream(fos);
             }
-            else{
-                fos=new FileOutputStream(f);
-                out=new ObjectOutputStream(fos);
+            for (Object Registernewmember : u) {
+                out.writeObject((Registernewmember) Registernewmember);
             }
-            for (Object Registernewmember : u)
-                out.writeObject((Registernewmember)Registernewmember);
             out.close();
             ObjectInputStream in = new ObjectInputStream(new FileInputStream("Registernewmember.bin"));
             Registernewmember d;
@@ -86,23 +86,27 @@ public class OARegisterAnAccountSceneController implements Initializable {
         } catch (Exception e) {
             // TODO: handle exception
         }
-        
-        fisrtNameTF.clear();lastNameTF.clear();phoneNumTF.clear();nidTF.clear();emailTF.clear();
-        
+
+        fisrtNameTF.clear();
+        lastNameTF.clear();
+        phoneNumTF.clear();
+        nidTF.clear();
+        emailTF.clear();
+
         Alert a = new Alert(Alert.AlertType.INFORMATION);
         a.setTitle("Congratulation");
         a.setHeaderText("Successfully Registered As A New Member");
-        a.showAndWait();   
+        a.showAndWait();
     }
 
     @FXML
     private void goToBack(ActionEvent event) throws IOException {
         Parent mainSceneParent = FXMLLoader.load(getClass().getResource("OfficerAssistantDashboard.fxml"));
         Scene scene1 = new Scene(mainSceneParent);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
         window.setScene(scene1);
-        window.show(); 
+        window.show();
     }
-    
+
 }

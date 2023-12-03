@@ -39,35 +39,36 @@ public class OAViewReportSceneController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void viewReportButtonOnClick(ActionEvent event) {
-        File file = new File(enterDateofViewReport.getValue()+".txt");
-        Scanner sc; String str=null;
+        File file = new File(enterDateofViewReport.getValue() + ".txt");
+        Scanner sc;
+        String str = null;
         try {
             sc = new Scanner(file);
             viewReportTA.setText(null);
-            while(sc.hasNextLine()){
-                str=sc.nextLine();
-                viewReportTA.appendText(str+"\n");
-              
+            while (sc.hasNextLine()) {
+                str = sc.nextLine();
+                viewReportTA.appendText(str + "\n");
+
             }
         } catch (FileNotFoundException ex) {
             //todo
+        }
+
     }
-    
-}
 
     @FXML
     private void goToBack(ActionEvent event) throws IOException {
         Parent mainSceneParent = FXMLLoader.load(getClass().getResource("OfficerAssistantDashboard.fxml"));
         Scene scene1 = new Scene(mainSceneParent);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
         window.setScene(scene1);
-        window.show(); 
-         
+        window.show();
+
     }
-    
+
 }
