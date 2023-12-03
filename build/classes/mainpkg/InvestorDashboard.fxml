@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="548.0" prefWidth="651.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="mainpkg.InvestorDashboardController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="3.0" layoutY="6.0" prefHeight="530.0" prefWidth="648.0" style="-fx-background-color: lime;">
+         <children>
+            <VBox prefHeight="554.0" prefWidth="173.0" style="-fx-background-color: yellow;">
+               <children>
+                  <Label alignment="CENTER" prefHeight="63.0" prefWidth="173.0" text="H" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Broadway" size="60.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="11.0" prefWidth="173.0" text="O" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Broadway" size="60.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="53.0" prefHeight="43.0" prefWidth="174.0" text="M" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Broadway" size="60.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="96.0" prefHeight="43.0" prefWidth="174.0" text="E" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Broadway" size="60.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="139.0" prefHeight="43.0" prefWidth="174.0" text="P" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Broadway" size="60.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="182.0" prefHeight="43.0" prefWidth="174.0" text="A" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Broadway" size="60.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="225.0" prefHeight="43.0" prefWidth="174.0" text="G" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Broadway" size="60.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="268.0" prefHeight="43.0" prefWidth="174.0" text="E" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Broadway" size="60.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Button layoutX="219.0" layoutY="140.0" mnemonicParsing="false" onAction="#goToCreateInvestorAccount" prefHeight="56.0" prefWidth="132.0" text="Create Investor Account" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="485.0" layoutY="140.0" mnemonicParsing="false" onAction="#goToViewPersonalDetails" prefHeight="56.0" prefWidth="132.0" text="View Personal Details" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="219.0" layoutY="397.0" mnemonicParsing="false" onAction="#goToBuyAndSellOrder" prefHeight="56.0" prefWidth="132.0" text="Buu &amp; Sell Order" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="485.0" layoutY="309.0" mnemonicParsing="false" onAction="#goToAccessMarketData" prefHeight="56.0" prefWidth="132.0" text="Access Market Data" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="219.0" layoutY="225.0" mnemonicParsing="false" onAction="#goToUpdateInformation" prefHeight="56.0" prefWidth="132.0" text="Update Information" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="485.0" layoutY="228.0" mnemonicParsing="false" onAction="#goToViewTransectionHistory" prefHeight="49.0" prefWidth="132.0" text="View Transection History" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="219.0" layoutY="309.0" mnemonicParsing="false" onAction="#goToNewsAndUpdates" prefHeight="56.0" prefWidth="132.0" text="News &amp; Updates" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="485.0" layoutY="397.0" mnemonicParsing="false" onAction="#goToContactSupport" prefHeight="56.0" prefWidth="132.0" text="Conatct Support" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="367.0" layoutY="484.0" mnemonicParsing="false" onAction="#goToBack" prefHeight="36.0" prefWidth="106.0" style="-fx-background-color: red;" text="SIGN OUT">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" layoutX="280.0" layoutY="43.0" prefHeight="42.0" prefWidth="271.0" style="-fx-background-color: green;" text="Investor Dashboard" textFill="WHITE">
+               <font>
+                  <Font name="Broadway" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
